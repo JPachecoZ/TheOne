@@ -6,3 +6,9 @@ FrontEnd Application to Rule them All
 > Using React.js.
 > Using @emotion/react.
 > Using @emotion/styled.
+> This website will be similar to netflix.
+>   Books:
+>   Movie: 
+>   Characters:
+>   Quotes - Movies:
+>
