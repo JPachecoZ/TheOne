@@ -14,10 +14,15 @@ const StyledTitle = styled.h1`
 
 const Card = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 0.3rem;
+  overflow: auto;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 `
 const StyledCard = styled.div`
-  width: 7rem;
+  min-width: 7rem;
+  max-width: 7rem;
   height: 10rem;
   border: 1px solid;
   border-radius: 5%;
@@ -31,8 +36,9 @@ const StyledCard = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  transform: scale(0.9);
   &:hover{
-    transform: scale(1.1);
+    transform: scale(1);
     transition: 0.35s;
   }
 `
