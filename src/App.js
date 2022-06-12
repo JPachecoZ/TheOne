@@ -1,22 +1,21 @@
 import { useState, useEffect } from "react";
+import getBooks from "./services/GetData";
 
 function App() {
 
   const [books, setBooks] = useState([])
 
   useEffect(()=> {
-    fetch("https://the-one-api.dev/v2/book", {method: "GET"})
-      .then((response) => response.json()
-        .then((data)=> setBooks(data.docs)
-        )
-      )
+    getBooks()
+      .then((data) => {setBooks(data);
+      })
+      .catch((error) => console.log(error));
   }, []);
-
 
   return (
     <ul>
       {books?.map((book)=> (
-        <li key={book.id}>{book.name}</li>
+        <li key={book._id}>{book.name}</li>
       ))}
     </ul>
 
