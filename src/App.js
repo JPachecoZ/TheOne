@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from "react";
+import styled from "@emotion/styled";
 import getData from "./services/GetData";
 import { apiChars } from "./data";
 import Row from "./components/Row";
+
+const Container = styled.div`
+  height: 100vh;
+  background-image: url("https://wallpaperaccess.com/full/1201999.jpg");
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+`
 
 function App() {
   const data = apiChars;
@@ -16,11 +26,11 @@ function App() {
   }, []);
 
   return (
-    <React.Fragment>
+    <Container>
       {categoriesData?.map((category) => (
         <Row key = {category.name} title = {category.name.toUpperCase()} data={category.data}/>
       ))}
-    </React.Fragment>
+    </Container>
   );
 }
 
