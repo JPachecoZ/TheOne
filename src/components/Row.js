@@ -46,7 +46,7 @@ const StyledCard = styled.div`
 export default function Row(props){
   return (
     <Container>
-      <StyledTitle>{props.title + "S"}</StyledTitle>
+      <StyledTitle>{props.title}</StyledTitle>
       <Card>
         {getRandomSubarray(props.data, 7)?.map((data) =>(
         <StyledCard key={data._id}>{data.name}</StyledCard>
