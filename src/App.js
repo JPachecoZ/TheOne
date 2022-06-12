@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import getBooks from "./services/GetData";
 
 function App() {
@@ -13,12 +13,13 @@ function App() {
   }, []);
 
   return (
-    <ul>
-      {books?.map((book)=> (
-        <li key={book._id}>{book.name}</li>
-      ))}
-    </ul>
-
+    <React.Fragment>
+      <ul>
+        {books?.map((book)=> (
+          <li key={book._id}>{book.name}</li>
+        ))}
+      </ul>
+    </React.Fragment>
   );
 }
 
