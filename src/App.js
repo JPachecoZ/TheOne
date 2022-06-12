@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import getData from "./services/GetData";
-import { apiChars } from "./data";
 import Row from "./components/Row";
 
 const Container = styled.div`
@@ -14,15 +13,14 @@ const Container = styled.div`
 `
 
 function App() {
-  const data = apiChars;
   const [categoriesData, setCategoriesData] = useState([])
 
   useEffect(()=> {
-    // getData()
-    // .then((data) => {
+    getData()
+    .then((data) => {
         setCategoriesData(data);
-      // })
-      // .catch((error) => console.log(error));
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   return (
