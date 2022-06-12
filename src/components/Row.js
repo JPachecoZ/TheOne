@@ -9,6 +9,7 @@ const Container = styled.div`
 const StyledTitle = styled.h1`
   display: flex;
   margin: 1.25rem 0rem;
+  color: white;
 `
 
 const Card = styled.div`
@@ -16,16 +17,30 @@ const Card = styled.div`
   gap: 10px;
 `
 const StyledCard = styled.div`
-  width: 6rem;
-  height: 8rem;
+  width: 7rem;
+  height: 10rem;
   border: 1px solid;
+  border-radius: 5%;
+  padding: 1rem;
+  text-overflow: ellipsis;
   text-align: center;
+  color: white;
+  background-image: url("https://w0.peakpx.com/wallpaper/690/315/HD-wallpaper-tree-of-gondor-earth-lord-middle-ring-rings.jpg");
+  background-size: cover;
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+    transition: 0.35s;
+  }
 `
 
 export default function Row(props){
   return (
     <Container>
-      <StyledTitle>{props.title}</StyledTitle>
+      <StyledTitle>{props.title + "S"}</StyledTitle>
       <Card>
         {getRandomSubarray(props.data, 7)?.map((data) =>(
         <StyledCard key={data._id}>{data.name}</StyledCard>
