@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# About this app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), for the Rheonics frontend coding challenge.
 
 ## Available Scripts
 
@@ -19,52 +19,27 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Overall Structure
+This Website page was populated with API Data from [TheOneAPI](https://the-one-api.dev/) as a single page application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The page holds three states for the books, movies and characters data gotten from the API and one Header made with M[Material UI](https://mui.com/) sticked to the top of the Website. This Header could be used to add a Search or Login features.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For the error in fetching data there are try catch functions inside the ApiFetch function to avoid crashes. Errors can be seen in the Console.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If any doubts, or if in the need for more information, feel free to contact me at jepach@gmail.com.
 
-### `npm run eject`
+## Libraries used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+For Global Developing:
+- React.js
+- Node.js version 16.15.1 LTS
+- npm version 8.11.0
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For CSS handling within JavaScript:
+- emotion/styled
+- emotion/css
+- mui/material
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For unit testing:
+- react-testing-library/user-event
+- react-testing-library/jest-dom
