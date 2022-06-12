@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import getBooks from "./services/GetData";
+import Row from "./components/Row";
 
 function App() {
-
+  const categories = ["BOOKS", "MOVIES", "CHARACTERS", "QUOTES"]
   const [books, setBooks] = useState([])
 
   useEffect(()=> {
@@ -14,11 +15,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <ul>
-        {books?.map((book)=> (
-          <li key={book._id}>{book.name}</li>
-        ))}
-      </ul>
+      <Row books = {books}/>
     </React.Fragment>
   );
 }
