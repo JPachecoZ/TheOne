@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react";
-import getBooks from "./services/GetData";
+import getData from "./services/GetData";
+import { apiChars } from "./data";
 import Row from "./components/Row";
 
 function App() {
-  const categories = ["BOOKS", "MOVIES", "CHARACTERS", "QUOTES"]
-  const [books, setBooks] = useState([])
+  const data = apiChars;
+  const [categoriesData, setCategoriesData] = useState([])
 
   useEffect(()=> {
-    getBooks()
-      .then((data) => {setBooks(data);
-      })
-      .catch((error) => console.log(error));
+    // getData()
+    // .then((data) => {
+        setCategoriesData(data);
+      // })
+      // .catch((error) => console.log(error));
   }, []);
 
   return (
     <React.Fragment>
-      <Row books = {books}/>
+      {categoriesData?.map((category) => (
+        <Row key = {category.name} title = {category.name.toUpperCase()} data={category.data}/>
+      ))}
     </React.Fragment>
   );
 }

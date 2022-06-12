@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import getRandomSubarray from "../helpers/Helpers";
 
 const StyledTitle = styled.h1`
   display: flex;
@@ -16,13 +17,12 @@ const StyledCard = styled.div`
 `
 
 export default function Row(props){
-  
   return (
     <React.Fragment>
-      <StyledTitle>BOOKS</StyledTitle>
+      <StyledTitle>{props.title}</StyledTitle>
       <Container>
-        {props.books?.map((book) =>(
-        <StyledCard key={book._id}>{book.name}</StyledCard>
+        {getRandomSubarray(props.data, 7)?.map((data) =>(
+        <StyledCard key={data._id}>{data.name}</StyledCard>
         ))}
       </Container>
     </React.Fragment>
