@@ -22,7 +22,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ## Overall Structure
 This Website page was populated with API Data from [TheOneAPI](https://the-one-api.dev/) as a single page application.
 
-The page holds three states for the books, movies and characters data gotten from the API and one Header made with M[Material UI](https://mui.com/) sticked to the top of the Website. This Header could be used to add a Search or Login features.
+The page holds three states for the books, movies and characters data gotten from the API and one Header made with [Material UI](https://mui.com/) sticked to the top of the Website. This Header could be used to add a Search or Login features or a Menu if there's more need of content.
 
 For the error in fetching data there are try catch functions inside the ApiFetch function to avoid crashes. Errors can be seen in the Console.
 
@@ -41,5 +41,4 @@ For CSS handling within JavaScript:
 - mui/material
 
 For unit testing:
-- react-testing-library/user-event
 - react-testing-library/jest-dom
